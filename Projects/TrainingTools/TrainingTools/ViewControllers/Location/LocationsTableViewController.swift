@@ -8,13 +8,22 @@
 
 import UIKit
 
-class LocationsTableViewController: UITableViewController {
+class LocationsTableViewController: UITableViewController, LocationServiceDelegate {
 
     var locationService = LocationService.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        locationService.delegate = self
+    }
+
+    // MARK: - Actions
+
+    @IBAction func addLocation(_ sender: UIBarButtonItem) {
+
+        //Get a new location and update the tableView
+        locationService.fetchCurrentLocation()
     }
 
     // MARK: - Table view data source
@@ -52,5 +61,8 @@ class LocationsTableViewController: UITableViewController {
         return cell
     }
 
+    func locationServiceDidUpdateLocations() {
+        tableView.reloadData()
+    }
     
 }
