@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OIR-LE-Ufw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FirstFlow-->
+        <scene sceneID="YfZ-8r-fAw">
+            <objects>
+                <viewController id="OIR-LE-Ufw" customClass="ViewController" customModule="TrainingTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FvN-b6-FKb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Eq-XQ-e0a">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzZ-tG-0aF">
+                                <rect key="frame" x="178.5" y="64" width="57" height="30"/>
+                                <state key="normal" title="Button 1"/>
+                                <connections>
+                                    <action selector="sayHello:" destination="OIR-LE-Ufw" eventType="touchUpInside" id="eP2-oH-FO2"/>
+                                </connections>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMs-EM-Yjy">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pSy-kC-pbF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="systemUltraThinMaterialDark"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQz-9Q-4KI">
+                                <rect key="frame" x="177.5" y="115" width="59" height="30"/>
+                                <state key="normal" title="Button 2"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Eq-XQ-e0a" firstAttribute="leading" secondItem="FvN-b6-FKb" secondAttribute="leading" id="6Qu-xx-9Mn"/>
+                            <constraint firstItem="uzZ-tG-0aF" firstAttribute="centerX" secondItem="FvN-b6-FKb" secondAttribute="centerX" id="9vq-X5-oWI"/>
+                            <constraint firstItem="2Eq-XQ-e0a" firstAttribute="top" secondItem="FvN-b6-FKb" secondAttribute="top" id="DmV-oc-VUe"/>
+                            <constraint firstItem="oMs-EM-Yjy" firstAttribute="height" secondItem="FvN-b6-FKb" secondAttribute="height" multiplier="0.5" id="Hhw-ON-j3U"/>
+                            <constraint firstItem="nQz-9Q-4KI" firstAttribute="top" secondItem="uzZ-tG-0aF" secondAttribute="bottom" constant="21" id="QZ9-x2-kEG"/>
+                            <constraint firstAttribute="bottom" secondItem="oMs-EM-Yjy" secondAttribute="bottom" id="S5Y-1h-KoJ"/>
+                            <constraint firstAttribute="trailing" secondItem="oMs-EM-Yjy" secondAttribute="trailing" id="Uzj-wJ-s7h"/>
+                            <constraint firstAttribute="bottom" secondItem="2Eq-XQ-e0a" secondAttribute="bottom" id="VoI-Lg-AyM"/>
+                            <constraint firstItem="oMs-EM-Yjy" firstAttribute="leading" secondItem="FvN-b6-FKb" secondAttribute="leading" id="VwB-Kn-KM8"/>
+                            <constraint firstItem="nQz-9Q-4KI" firstAttribute="centerX" secondItem="uzZ-tG-0aF" secondAttribute="centerX" id="kdI-KP-KOX"/>
+                            <constraint firstItem="uzZ-tG-0aF" firstAttribute="top" secondItem="9MC-nK-JKA" secondAttribute="top" constant="20" id="qZx-VL-zAp"/>
+                            <constraint firstAttribute="trailing" secondItem="2Eq-XQ-e0a" secondAttribute="trailing" id="twk-I4-mMa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9MC-nK-JKA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="FirstFlow" image="1.circle" catalog="system" selectedImage="1.circle.fill" id="0Lq-30-gIF"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="button1" destination="uzZ-tG-0aF" id="m7F-ac-gHW"/>
+                        <outlet property="button2" destination="nQz-9Q-4KI" id="Fzz-dv-FOS"/>
+                        <outletCollection property="buttons" destination="uzZ-tG-0aF" collectionClass="NSMutableArray" id="GK1-2o-LHp"/>
+                        <outletCollection property="buttons" destination="nQz-9Q-4KI" collectionClass="NSMutableArray" id="YIu-tY-3jO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7k-ZA-F4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263.768115942029" y="176.11607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.circle" catalog="system" width="64" height="60"/>
+        <image name="1.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
