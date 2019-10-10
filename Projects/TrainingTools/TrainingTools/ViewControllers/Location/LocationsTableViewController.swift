@@ -26,6 +26,12 @@ class LocationsTableViewController: UITableViewController, LocationServiceDelega
         locationService.fetchCurrentLocation()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //To pass data
+        //Identifier la location
+        //Passer la location à la map
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

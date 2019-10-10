@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -133,6 +133,8 @@
 			dependencies = (
 			);
 			name = TrainingTools;
+			packageProductDependencies = (
+			);
 			productName = TrainingTools;
 			productReference = 33EAA122234DD129001E8AAA /* TrainingTools.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 33EAA119234DD129001E8AAA;
+			packageReferences = (
+				33427434234F7F5D005D7A9A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 33EAA123234DD129001E8AAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +409,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33427434234F7F5D005D7A9A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 33EAA11A234DD129001E8AAA /* Project object */;
 }

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,6 +64,7 @@
                                     <outlet property="addressLabel" destination="8Y2-Nt-nXM" id="NG0-fL-jTK"/>
                                     <outlet property="dateLabel" destination="xRd-Cp-Jpx" id="6Pb-6Y-eQE"/>
                                     <outlet property="mapImageView" destination="mE4-lM-xvu" id="7GD-U9-nG7"/>
+                                    <segue destination="6oR-L8-aGs" kind="show" id="svX-fX-oom"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,6 +85,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ykc-qS-FI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="180.80357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s6G-M9-VwS">
+            <objects>
+                <viewController id="6oR-L8-aGs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lWh-9K-Zfb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nFM-oS-LsY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nFM-oS-LsY" firstAttribute="leading" secondItem="hvO-pM-iWg" secondAttribute="leading" id="2Fm-wP-RtO"/>
+                            <constraint firstItem="nFM-oS-LsY" firstAttribute="trailing" secondItem="hvO-pM-iWg" secondAttribute="trailing" id="OYx-bZ-sjI"/>
+                            <constraint firstAttribute="bottom" secondItem="nFM-oS-LsY" secondAttribute="bottom" id="VHk-wM-OAa"/>
+                            <constraint firstItem="nFM-oS-LsY" firstAttribute="top" secondItem="lWh-9K-Zfb" secondAttribute="top" id="okW-kc-i5B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hvO-pM-iWg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IGd-if-CE2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lm-to-alv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="176.78571428571428"/>
         </scene>
         <!--Locations-->
         <scene sceneID="SX8-pS-77j">
