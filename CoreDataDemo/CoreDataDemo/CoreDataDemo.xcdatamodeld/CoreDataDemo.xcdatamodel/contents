@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Author" representedClassName="Author" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+        <attribute name="salary" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Book" inverseName="author" inverseEntity="Book"/>
+        <relationship name="editors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Editor" inverseName="authors" inverseEntity="Editor"/>
+    </entity>
+    <entity name="Book" representedClassName="Book" syncable="YES" codeGenerationType="class">
+        <attribute name="coverImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="numberOfPages" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sumary" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Author" inverseName="books" inverseEntity="Author"/>
+    </entity>
+    <entity name="Editor" representedClassName="Editor" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="authors" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Author" inverseName="editors" inverseEntity="Author"/>
+    </entity>
+    <elements>
+        <element name="Author" positionX="-370.03125" positionY="-105.31640625" width="128" height="118"/>
+        <element name="Book" positionX="-367.0859375" positionY="157.0703125" width="128" height="118"/>
+        <element name="Editor" positionX="-23.7109375" positionY="16.8203125" width="128" height="73"/>
+    </elements>
+</model>
