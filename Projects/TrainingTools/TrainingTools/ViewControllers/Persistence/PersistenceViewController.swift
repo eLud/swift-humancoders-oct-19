@@ -10,6 +10,7 @@ import UIKit
 
 class PersistenceViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var userNameLabel: UITextField!
     @IBOutlet weak var precisionSlider: UISlider!
     @IBOutlet weak var isTrackingEnabledSwitch: UISwitch!
@@ -23,6 +24,28 @@ class PersistenceViewController: UIViewController {
         userNameLabel.text = prefs.string(forKey: Constants.UserDefaults.userName)
         precisionSlider.value = prefs.float(forKey: Constants.UserDefaults.trackinPrecision)
         isTrackingEnabledSwitch.isOn = prefs.bool(forKey: Constants.UserDefaults.trackinPrecision)
+    }
+
+    //MARK: - URLSession demo
+    @IBAction func downloadImage(_ sender: Any) {
+
+        let url = URL(string: "https://developer.apple.com/home/images/hero-apple-platforms/large_2x.jpg")!
+
+        let session = URLSession.shared
+        let task = session.dataTask(with: url) { (data, response, error) in
+            guard error == nil else { return }
+            guard let data = data else { return }
+            let image = UIImage(data: data)
+
+            DispatchQueue.main.async {
+                self.imageView.image = image
+            }
+
+            print("Youhoi")
+        }
+
+        //Don't forget the resume !!!!!!!!!
+        task.resume()
     }
 
     //MARK: - UserDefaults demo
