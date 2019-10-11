@@ -32,6 +32,13 @@ class LocationDetailsViewController: UIViewController {
         self.title = Constants.DateFormatters.mediumDateShortTime.string(from: location.timestamp)
         mapView.addAnnotation(location.annotation)
         mapView.setCenter(location.annotation.coordinate, animated: true)
+        mapView.showsUserLocation = true
+        mapView.showsScale = false
+        mapView.showsTraffic = false
+        mapView.showsBuildings = false
+
+        mapView.pointOfInterestFilter = MKPointOfInterestFilter(including: [])
+        mapView.mapType = .mutedStandard
     }
 
     @IBAction func showItinerary(_ sender: Any) {
@@ -57,5 +64,12 @@ extension LocationDetailsViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
         print(views)
+    }
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+        let anView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        anView.image = UIImage(systemName: "mappin.and.ellipse")
+        return anView
     }
 }
