@@ -10,6 +10,8 @@
 		333B2348234F2A6E002184CD /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B2347234F2A6E002184CD /* LocationTableViewCell.swift */; };
 		334274772350703A005D7A9A /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334274762350703A005D7A9A /* LocationDetailsViewController.swift */; };
 		3342747A235076F6005D7A9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33427479235076F6005D7A9A /* Constants.swift */; };
+		3342747C2350AE2C005D7A9A /* FourthFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3342747B2350AE2C005D7A9A /* FourthFlow.storyboard */; };
+		3342747F2350AF54005D7A9A /* PersistenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342747E2350AF54005D7A9A /* PersistenceViewController.swift */; };
 		33702B45234E317F00873597 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702B44234E317F00873597 /* User.swift */; };
 		33AA0026234F1904003EE126 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA0025234F1904003EE126 /* LocationsTableViewController.swift */; };
 		33AA0028234F1A49003EE126 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA0027234F1A49003EE126 /* Location.swift */; };
@@ -29,6 +31,8 @@
 		333B2347234F2A6E002184CD /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		334274762350703A005D7A9A /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		33427479235076F6005D7A9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3342747B2350AE2C005D7A9A /* FourthFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FourthFlow.storyboard; sourceTree = "<group>"; };
+		3342747E2350AF54005D7A9A /* PersistenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceViewController.swift; sourceTree = "<group>"; };
 		33702B44234E317F00873597 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		33AA0025234F1904003EE126 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
 		33AA0027234F1A49003EE126 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -65,6 +69,14 @@
 				334274762350703A005D7A9A /* LocationDetailsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3342747D2350AF22005D7A9A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3342747E2350AF54005D7A9A /* PersistenceViewController.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		33AA0024234F188A003EE126 /* Location */ = {
@@ -118,6 +130,7 @@
 				33EAA13A234DD99D001E8AAA /* FirstFlow.storyboard */,
 				33EAA13C234DD9BE001E8AAA /* SecondFlow.storyboard */,
 				33EAA144234E1D4D001E8AAA /* ThirdFlow.storyboard */,
+				3342747B2350AE2C005D7A9A /* FourthFlow.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 		33EAA148234E1ECA001E8AAA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3342747D2350AF22005D7A9A /* Persistence */,
 				33AA0024234F188A003EE126 /* Location */,
 				33EAA129234DD129001E8AAA /* ViewController.swift */,
 			);
@@ -199,6 +213,7 @@
 				33EAA145234E1D4D001E8AAA /* ThirdFlow.storyboard in Resources */,
 				33EAA12D234DD129001E8AAA /* Main.storyboard in Resources */,
 				33EAA13D234DD9BE001E8AAA /* SecondFlow.storyboard in Resources */,
+				3342747C2350AE2C005D7A9A /* FourthFlow.storyboard in Resources */,
 				33EAA13B234DD99D001E8AAA /* FirstFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +234,7 @@
 				33EAA126234DD129001E8AAA /* AppDelegate.swift in Sources */,
 				334274772350703A005D7A9A /* LocationDetailsViewController.swift in Sources */,
 				33AA0028234F1A49003EE126 /* Location.swift in Sources */,
+				3342747F2350AF54005D7A9A /* PersistenceViewController.swift in Sources */,
 				33EAA128234DD129001E8AAA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

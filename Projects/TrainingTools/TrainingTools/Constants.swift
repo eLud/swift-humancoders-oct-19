@@ -22,4 +22,10 @@ struct Constants {
             return f
         }()
     }
+
+    struct UserDefaults {
+        static let userName = "usernameUserDefaultKey"
+        static let trackinPrecision = "trackinPrecisionUserDefaultKey"
+        static let isTrackingEnabled = "isTrackingEnabledUserDefaultKey"
+    }
 }

@@ -20,7 +20,11 @@ class LocationService: NSObject, CLLocationManagerDelegate {
 
     var delegate: LocationServiceDelegate?
 
-    var locations: [Location] = []
+    var locations: [Location] = [] {
+        didSet {
+            delegate?.locationServiceDidUpdateLocations()
+        }
+    }
     let locationManager = CLLocationManager()
 
     func fetchCurrentLocation() {

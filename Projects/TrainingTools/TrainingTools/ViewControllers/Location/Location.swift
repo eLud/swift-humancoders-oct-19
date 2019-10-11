@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-struct Location {
+struct Location: Codable {
 
     let latitude: Double
     let longitude: Double
