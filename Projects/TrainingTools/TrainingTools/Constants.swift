@@ -9,6 +9,11 @@
 import Foundation
 
 struct Constants {
+
+    struct NotificationNames {
+        static let locationUpdated = Notification.Name("locationUpdated")
+    }
+
     struct DateFormatters {
         static let mediumDateShortTime: DateFormatter = {
             let f = DateFormatter()

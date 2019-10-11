@@ -20,7 +20,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
 
     var delegate: LocationServiceDelegate?
 
-    var locations: [Location] = [Location(latitude: 0, longitude: 0, timestamp: Date())]
+    var locations: [Location] = []
     let locationManager = CLLocationManager()
 
     func fetchCurrentLocation() {
@@ -31,6 +31,18 @@ class LocationService: NSObject, CLLocationManagerDelegate {
         locationManager.delegate = self
 
         locationManager.requestLocation()
+        locationManager.allowsBackgroundLocationUpdates = true
+
+        locationManager.startMonitoringVisits()
+    }
+
+    func trackLocation() {
+        locationManager.requestWhenInUseAuthorization()
+
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager.delegate = self
+
+        locationManager.startUpdatingLocation()
         locationManager.allowsBackgroundLocationUpdates = true
 
         locationManager.startMonitoringVisits()

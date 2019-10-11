@@ -7,10 +7,34 @@
 //
 
 import Foundation
+import MapKit
 
 struct Location {
 
     let latitude: Double
     let longitude: Double
     let timestamp: Date
+
+    var annotation: LocationAnnotation {
+        return LocationAnnotation(location: self)
+    }
+}
+
+//Class wrapper
+class LocationAnnotation: NSObject, MKAnnotation {
+
+    var location: Location
+
+    var title: String? {
+        return Constants.DateFormatters.mediumDateShortTime.string(from: location.timestamp)
+    }
+
+//    var subtitle: String
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+    }
+
+    init(location: Location) {
+        self.location = location
+    }
 }

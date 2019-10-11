@@ -9,8 +9,6 @@
 import UIKit
 import MapKit
 
-
-
 class LocationDetailsViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -23,6 +21,7 @@ class LocationDetailsViewController: UIViewController {
             fatalError("No location provided")
         }
 
+        mapView.delegate = self
         configureUI(with: location)
     }
 
@@ -31,6 +30,32 @@ class LocationDetailsViewController: UIViewController {
     private func configureUI(with location: Location) {
 
         self.title = Constants.DateFormatters.mediumDateShortTime.string(from: location.timestamp)
+        mapView.addAnnotation(location.annotation)
+        mapView.setCenter(location.annotation.coordinate, animated: true)
     }
 
+    @IBAction func showItinerary(_ sender: Any) {
+
+        let coordinates = LocationService.shared.locations.map({CLLocationCoordinate2D(latitude: $0.latitude, longitude: $0.longitude)})
+
+        let polyLine = MKPolyline(coordinates: coordinates, count: coordinates.count)
+        mapView.addOverlay(polyLine)
+    }
+}
+
+extension LocationDetailsViewController: MKMapViewDelegate {
+
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if let polyline = overlay as? MKPolyline {
+             let testlineRenderer = MKPolylineRenderer(polyline: polyline)
+             testlineRenderer.strokeColor = .blue
+             testlineRenderer.lineWidth = 2.0
+             return testlineRenderer
+         }
+        return MKOverlayRenderer()
+    }
+
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        print(views)
+    }
 }

@@ -26,6 +26,10 @@ class LocationsTableViewController: UITableViewController, LocationServiceDelega
         locationService.fetchCurrentLocation()
     }
 
+    @IBAction func startTracking(_ sender: Any) {
+        locationService.trackLocation()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //To pass data
 

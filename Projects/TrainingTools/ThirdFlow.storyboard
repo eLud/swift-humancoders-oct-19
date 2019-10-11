@@ -74,11 +74,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="UlA-Sb-PRF">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="lz2-Xn-p2d">
-                            <connections>
-                                <action selector="addLocation:" destination="Tus-yH-aj1" id="yzt-77-eIm"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="plus" catalog="system" id="lz2-Xn-p2d">
+                                <connections>
+                                    <action selector="addLocation:" destination="Tus-yH-aj1" id="yzt-77-eIm"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="pencil.slash" catalog="system" id="ksA-Bw-p78">
+                                <connections>
+                                    <action selector="startTracking:" destination="Tus-yH-aj1" id="VKb-bO-CYS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -107,7 +114,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hvO-pM-iWg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IGd-if-CE2"/>
+                    <navigationItem key="navigationItem" id="IGd-if-CE2">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil.and.outline" catalog="system" id="Tkd-zX-lMF">
+                            <connections>
+                                <action selector="showItinerary:" destination="6oR-L8-aGs" id="OW8-Be-d6u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="nFM-oS-LsY" id="ueu-xf-QHp"/>
                     </connections>
@@ -138,6 +151,8 @@
     </scenes>
     <resources>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
+        <image name="pencil.and.outline" catalog="system" width="64" height="58"/>
+        <image name="pencil.slash" catalog="system" width="64" height="56"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <namedColor name="customGreen">
             <color red="0.29800000786781311" green="0.85100001096725464" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
