@@ -64,7 +64,7 @@
                                     <outlet property="addressLabel" destination="8Y2-Nt-nXM" id="NG0-fL-jTK"/>
                                     <outlet property="dateLabel" destination="xRd-Cp-Jpx" id="6Pb-6Y-eQE"/>
                                     <outlet property="mapImageView" destination="mE4-lM-xvu" id="7GD-U9-nG7"/>
-                                    <segue destination="6oR-L8-aGs" kind="show" id="svX-fX-oom"/>
+                                    <segue destination="6oR-L8-aGs" kind="show" identifier="showDetails" id="svX-fX-oom"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="180.80357142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Location Details View Controller-->
         <scene sceneID="s6G-M9-VwS">
             <objects>
-                <viewController id="6oR-L8-aGs" sceneMemberID="viewController">
+                <viewController id="6oR-L8-aGs" customClass="LocationDetailsViewController" customModule="TrainingTools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lWh-9K-Zfb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,6 +108,9 @@
                         <viewLayoutGuide key="safeArea" id="hvO-pM-iWg"/>
                     </view>
                     <navigationItem key="navigationItem" id="IGd-if-CE2"/>
+                    <connections>
+                        <outlet property="mapView" destination="nFM-oS-LsY" id="ueu-xf-QHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lm-to-alv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

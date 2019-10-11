@@ -28,7 +28,17 @@ class LocationsTableViewController: UITableViewController, LocationServiceDelega
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //To pass data
-        //Identifier la location
+
+        if segue.identifier == "showDetails" {
+
+            guard let destination = segue.destination as? LocationDetailsViewController else { return }
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let location = locationService.locations[indexPath.row]
+
+            destination.location = location
+        }
+
+        //Identifier la location à passer
         //Passer la location à la map
     }
 
