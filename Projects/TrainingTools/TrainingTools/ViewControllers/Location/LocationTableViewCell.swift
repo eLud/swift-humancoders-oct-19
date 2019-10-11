@@ -14,13 +14,6 @@ class LocationTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
 
-    let formatter: DateFormatter = {
-        let f = DateFormatter()
-        f.dateStyle = .medium
-        f.timeStyle = .short
-        return f
-    }()
-
     // Called after the loading
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +28,7 @@ class LocationTableViewCell: UITableViewCell {
 
     func configure(with location: Location) {
 
-        let dateString = formatter.string(from: location.timestamp)
+        let dateString = Constants.DateFormatters.mediumDateShortTime.string(from: location.timestamp)
         self.dateLabel.text = dateString
 
         addressLabel.text = "Lat : \(location.latitude), Long : \(location.longitude)"

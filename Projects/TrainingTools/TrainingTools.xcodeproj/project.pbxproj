@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		333B2348234F2A6E002184CD /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B2347234F2A6E002184CD /* LocationTableViewCell.swift */; };
+		3342747A235076F6005D7A9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33427479235076F6005D7A9A /* Constants.swift */; };
 		33702B45234E317F00873597 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702B44234E317F00873597 /* User.swift */; };
 		33AA0026234F1904003EE126 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA0025234F1904003EE126 /* LocationsTableViewController.swift */; };
 		33AA0028234F1A49003EE126 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA0027234F1A49003EE126 /* Location.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		333B2347234F2A6E002184CD /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		33427479235076F6005D7A9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33702B44234E317F00873597 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		33AA0025234F1904003EE126 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
 		33AA0027234F1A49003EE126 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				33EAA139234DD194001E8AAA /* TrainingTools.entitlements */,
+				33427479235076F6005D7A9A /* Constants.swift */,
 				33EAA125234DD129001E8AAA /* AppDelegate.swift */,
 				33EAA127234DD129001E8AAA /* SceneDelegate.swift */,
 				33702B44234E317F00873597 /* User.swift */,
@@ -201,6 +204,7 @@
 				333B2348234F2A6E002184CD /* LocationTableViewCell.swift in Sources */,
 				33702B45234E317F00873597 /* User.swift in Sources */,
 				33EAA12A234DD129001E8AAA /* ViewController.swift in Sources */,
+				3342747A235076F6005D7A9A /* Constants.swift in Sources */,
 				33EAA126234DD129001E8AAA /* AppDelegate.swift in Sources */,
 				33AA0028234F1A49003EE126 /* Location.swift in Sources */,
 				33EAA128234DD129001E8AAA /* SceneDelegate.swift in Sources */,
